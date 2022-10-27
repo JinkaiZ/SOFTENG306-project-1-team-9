@@ -1,0 +1,22 @@
+node {
+    size:30px;
+    fill-color:#7289DA;
+    text-size:13px;
+    text-color:#DAC372;
+    text-style:bold;
+    text-font:Arial;
+    text-alignment:center;
+    stroke-mode:plain;
+    stroke-width:3px;
+    stroke-color:#FFFFFF;
+}
+
+graph {
+    fill-color: #2C2F33;
+    padding:100px;
+}
+edge {
+    fill-color: #FFFFFF;
+    arrow-size:8px;
+    size:3px;
+}

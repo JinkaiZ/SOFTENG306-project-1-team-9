@@ -1,0 +1,19 @@
+digraph "5Nodes7Edges" {
+	A	[Weight=2];
+	B    	[Weight=2];
+    	C    	[Weight=2];
+    	D    	[Weight=3];
+    	E    	[Weight=2];
+    	F    	[Weight=3];
+    	G    	[Weight=2];
+	A -> B	[Weight=1];
+	A -> C	[Weight=3];
+	A -> D	[Weight=1];
+	B -> E	[Weight=3];
+	B -> G	[Weight=4];
+	C -> F 	[Weight=1];
+	D -> F	[Weight=1];
+	E -> G	[Weight=2];
+	F -> G	[Weight=2];
+
+}

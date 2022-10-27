@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.StackedBarChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1200.0" stylesheets="@../css/styling.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.MenuController">
+    <children>
+        <VBox prefHeight="800.0" prefWidth="300.0" style="-fx-background-color: #23272A;">
+            <children>
+                <Pane prefHeight="150.0" prefWidth="300.0">
+                    <children>
+                        <Label layoutX="41.0" layoutY="43.0" text="Scheduler" textFill="WHITE">
+                            <font>
+                                <Font name="Lato Regular" size="50.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </Pane>
+
+                <Button fx:id="startButton" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#startScheduler" prefHeight="75.0" prefWidth="300.0" stylesheets="@../css/styling.css" text="Start" textFill="WHITE">
+                    <padding>
+                        <Insets left="50.0" />
+                    </padding>
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Button>
+            <Button fx:id="graphButton" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#showMainPane" prefHeight="75.0" prefWidth="300.0" stylesheets="@../css/styling.css" text="Graph" textFill="WHITE">
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#hideMainPane" prefHeight="75.0" prefWidth="300.0" stylesheets="@../css/styling.css" text="Schedule" textFill="WHITE">
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="closeButton" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#closeMenu" prefHeight="75.0" prefWidth="300.0" stylesheets="@../css/styling.css" text="Quit" textFill="WHITE">
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Pane prefHeight="125.0" prefWidth="300.0" />
+      
+                <Pane prefHeight="75.0" prefWidth="300.0">
+                    <children>
+                        <Label fx:id="searchCount" layoutX="23.0" layoutY="25.0" text="Search Count: " textFill="WHITE">
+                            <font>
+                                <Font name="Lato Bold" size="20.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </Pane>
+      
+                <Pane prefHeight="75.0" prefWidth="300.0">
+                    <children>
+                        <Label fx:id="timeElapsed" layoutX="23.0" layoutY="25.0" text="Time Elapsed(ms): " textFill="WHITE">
+                            <font>
+                                <Font name="Lato Bold" size="20.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </Pane>
+      
+                <Pane prefHeight="75.0" prefWidth="300.0">
+                    <children>
+                        <Label fx:id="endTime" layoutX="23.0" layoutY="25.0" text="Finish Time: " textFill="WHITE">
+                            <font>
+                                <Font name="Lato Bold" size="20.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </Pane>
+            </children>
+        </VBox>
+      <StackedBarChart fx:id="stackedBarChart" layoutX="300.0" prefHeight="800.0" prefWidth="900.0">
+        <xAxis>
+          <NumberAxis side="BOTTOM">
+               <tickLabelFont>
+                  <Font size="15.0" />
+               </tickLabelFont></NumberAxis>
+        </xAxis>
+        <yAxis>
+          <CategoryAxis side="LEFT">
+               <tickLabelFont>
+                  <Font size="15.0" />
+               </tickLabelFont></CategoryAxis>
+        </yAxis>
+      </StackedBarChart>
+      <BorderPane fx:id="mainPane" layoutX="300.0" prefHeight="800.0" prefWidth="900.0" />
+    </children>
+</AnchorPane>
